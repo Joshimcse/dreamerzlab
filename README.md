@@ -23,6 +23,10 @@ npm install
 npm run dev
 ```
 
-## N.B:
+### N.B:
 
-`I am using Next.JS in first time in my life for fullfill your assignment requirment. firstly, I read Documentation then finally try to implement this project with Next.JS. <br> Basically, i don't have any idea about Next.JS best practise. If I have made any mistake, I hope you will forgive me. <br>Thank You!`
+`I am using Next.JS in first time in my life for fullfill your assignment requirment. firstly, I read Documentation then finally try to implement this project with Next.JS. `
+
+`Basically, i don't have any idea about Next.JS best practise. If I have made any mistake, I hope you will forgive me.`
+
+`Thank You!`
