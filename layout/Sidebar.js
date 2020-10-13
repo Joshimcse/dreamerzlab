@@ -9,6 +9,7 @@ const Sidebar = ({ toggleSidebar }) => {
     };
   }, []);
 
+  // Click ESC Key for Hide Sidebar
   const handleESCKey = event => {
     if (event.keyCode === 27) {
       toggleSidebar(false);

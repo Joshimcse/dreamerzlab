@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Map from '../components/Map';
-import styles from '../styles/Home.module.css';
 
 import { MAPBOX_TOKEN } from '../config';
 import polygonsGeoJSON from '../geojson-polygons-us-state.json';
+
+import styles from '../styles/Home.module.css';
 
 const Home = () => {
   return (
