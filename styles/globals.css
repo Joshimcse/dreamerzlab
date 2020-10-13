@@ -57,11 +57,9 @@ nav {
 
 .menu-btn {
   cursor: pointer;
-  transition-duration: 5s;
 }
 
 .menu-btn svg {
-  transition-duration: 5s;
   font-size: 35px;
   color: #666;
 }
