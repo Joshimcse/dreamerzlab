@@ -13,7 +13,7 @@ const Map = ({ MAPBOX_TOKEN, polygonsGeoJSON }) => {
     bearing: -7.5,
     pitch: 42,
     altitude: 1.5,
-    minZoom: 1
+    minZoom: 1,
   });
 
   return (
