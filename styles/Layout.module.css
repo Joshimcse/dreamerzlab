@@ -1,0 +1,64 @@
+/* Layout */
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  transition-property: opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background: rgba(0, 0, 0, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
+  cursor: pointer;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 48px;
+  background: #ededed;
+  padding: 0 10px;
+  border-bottom: 1px solid #00000014;
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; */
+}
+
+.menuBtn {
+  cursor: pointer;
+}
+
+.menuBtn svg {
+  font-size: 35px;
+  color: #666;
+}
+
+.sidebar {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 280px;
+  height: calc(100% - 48px);
+  background: #fff;
+  z-index: 3;
+}
+
+.contentArea {
+  flex-grow: 1;
+}

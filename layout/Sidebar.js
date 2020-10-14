@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import styles from '../styles/Layout.module.css';
+
 const Sidebar = ({ toggleSidebar }) => {
   useEffect(() => {
     document.addEventListener('keydown', handleESCKey, false);
@@ -16,7 +18,7 @@ const Sidebar = ({ toggleSidebar }) => {
     }
   };
 
-  return <div className="sidebar"></div>;
+  return <div className={styles.sidebar}></div>;
 };
 
 export default Sidebar;

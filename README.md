@@ -27,6 +27,6 @@ npm run dev
 
 `I am using Next.JS for the first time in my life to fulfill your assignment requirement. Firstly, I read Documentation then finally try to implement this project with Next.JS. `
 
-`Basically, I don't  have any idea about Next.JS best practices. If I have made any mistake, I hope you will forgive me.`
+`Basically, I don't have any idea about Next.JS best practices. If I have made any mistake, I hope you will forgive me.`
 
 `Thank You!`
