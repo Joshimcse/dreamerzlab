@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background: #191a1a;
 }
 
 .overlay {
@@ -16,8 +17,8 @@
   transition-property: opacity;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  background: rgba(0, 0, 0, 0.2);
-  /* background: rgba(255, 255, 255, 0.2); */
+  /* background: rgba(0, 0, 0, 0.2); */
+  background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 

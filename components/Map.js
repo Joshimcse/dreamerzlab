@@ -7,11 +7,13 @@ const Map = ({ MAPBOX_TOKEN, polygonsGeoJSON }) => {
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
-    latitude: 52.03,
-    longitude: -113.5,
-    zoom: 2.2,
-    minZoom: 1,
-    transitionDuration: 1,
+    latitude: 51.3,
+    longitude: -106,
+    zoom: 2.46,
+    bearing: -7.5,
+    pitch: 42,
+    altitude: 1.5,
+    minZoom: 1
   });
 
   return (
