@@ -2,3 +2,19 @@
   width: 100%;
   height: 100%;
 }
+
+.popup {
+  text-align: center;
+}
+.popup h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.popup p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.popup a {
+  font-size: 12px;
+}

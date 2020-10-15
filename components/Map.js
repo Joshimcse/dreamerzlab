@@ -1,9 +1,14 @@
-import { useState } from 'react';
-import ReactMapGL, { Source, Layer } from 'react-map-gl';
+import { useState, useEffect } from 'react';
+import ReactMapGL, { Source, Layer, Popup } from 'react-map-gl';
 
+import StatePopUp from './StatePopUp';
+
+import usStatesGeoJSON from '../data/us-state-geojson.json';
 import styles from '../styles/Map.module.css';
 
-const Map = ({ MAPBOX_TOKEN, polygonsGeoJSON }) => {
+const Map = () => {
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [currentState, setCurrentState] = useState(null);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
@@ -16,15 +21,34 @@ const Map = ({ MAPBOX_TOKEN, polygonsGeoJSON }) => {
     minZoom: 1,
   });
 
+  // State information popup
+  const statePopup = e => {
+    if (e.features && e.features.length > 0) {
+      const feature = e.features;
+
+      if (Object.keys(feature[0].properties).length > 1) {
+        setCurrentState({
+          properties: feature[0].properties,
+          lngLat: e.lngLat,
+        });
+        setShowPopUp(true);
+      } else {
+        setShowPopUp(false);
+        setCurrentState(null);
+      }
+    }
+  };
+
   return (
     <div className={styles.mapWrapper}>
       <ReactMapGL
         mapStyle="mapbox://styles/mapbox/dark-v10"
-        mapboxApiAccessToken={MAPBOX_TOKEN}
+        mapboxApiAccessToken={process.env.MAPBOX_KEY}
         {...viewport}
         onViewportChange={nextViewport => setViewport(nextViewport)}
+        onClick={e => statePopup(e)}
       >
-        <Source id="polylineLayer" type="geojson" data={polygonsGeoJSON}>
+        <Source id="polylineLayer" type="geojson" data={usStatesGeoJSON}>
           <Layer
             id="lineLayer"
             type="line"
@@ -38,7 +62,21 @@ const Map = ({ MAPBOX_TOKEN, polygonsGeoJSON }) => {
               'line-width': 1.5,
             }}
           />
+
+          <Layer
+            id="fillLayer"
+            type="fill"
+            source="my-data"
+            sourceLayer=""
+            layout={{}}
+            // filter={['==', '$type', 'Polygon']}
+            paint={{
+              'fill-color': 'rgba(247, 189, 0, .1)',
+            }}
+          />
         </Source>
+
+        {showPopUp ? <StatePopUp setShowPopUp={setShowPopUp} currentState={currentState} /> : null}
       </ReactMapGL>
     </div>
   );
