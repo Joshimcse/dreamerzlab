@@ -1,6 +1,6 @@
 import { Popup } from 'react-map-gl';
 
-import styles from '../styles/Map.module.css';
+import styles from '../../styles/Map.module.css';
 
 const StatePopUp = ({ setShowPopUp, currentState }) => {
   return (

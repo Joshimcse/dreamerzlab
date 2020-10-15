@@ -3,8 +3,8 @@ import ReactMapGL, { Source, Layer } from 'react-map-gl';
 
 import StatePopUp from './StatePopUp';
 
-import usStatesGeoJSON from '../data/us-state-geojson.json';
-import styles from '../styles/Map.module.css';
+import usStatesGeoJSON from '../../data/us-state-geojson.json';
+import styles from '../../styles/Map.module.css';
 
 const Map = () => {
   const [showPopUp, setShowPopUp] = useState(false);
