@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Popup } from 'react-map-gl';
 
 import styles from '../styles/Map.module.css';

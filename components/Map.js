@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import ReactMapGL, { Source, Layer, Popup } from 'react-map-gl';
+import { useState } from 'react';
+import ReactMapGL, { Source, Layer } from 'react-map-gl';
 
 import StatePopUp from './StatePopUp';
 
@@ -22,7 +22,7 @@ const Map = () => {
   });
 
   // State information popup
-  const statePopup = e => {
+  const popUpHandler = e => {
     if (e.features && e.features.length > 0) {
       const feature = e.features;
 
@@ -46,7 +46,7 @@ const Map = () => {
         mapboxApiAccessToken={process.env.MAPBOX_KEY}
         {...viewport}
         onViewportChange={nextViewport => setViewport(nextViewport)}
-        onClick={e => statePopup(e)}
+        onClick={e => popUpHandler(e)}
       >
         <Source id="polylineLayer" type="geojson" data={usStatesGeoJSON}>
           <Layer

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Map from '../components/Map';
 
-import polygonsGeoJSON from '../data/us-state-geojson.json';
-
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
